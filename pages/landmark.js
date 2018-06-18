@@ -11,6 +11,11 @@ class Landmark extends React.Component {
         order: '-sys.createdAt',
       })
       .then(response => {
+        response.items = response.items.map((item, index) => {
+          item.index = response.total - index;
+          return item;
+        });
+
         const compareSlug = l => l.fields.slug === query.slug;
         const landmark = response.items.find(compareSlug);
         return {
@@ -29,7 +34,7 @@ class Landmark extends React.Component {
             <div key={index}>
               <a href={`/${landmark.fields.slug}`}>
                 <h3>
-                  {this.props.landmarks.length - this.props.index}. {landmark.fields.title}
+                  {landmark.index}. {landmark.fields.title}
                   {this.props.index === index ? '*' : null}
                 </h3>
               </a>
@@ -46,7 +51,7 @@ class Landmark extends React.Component {
           </div>
           <div className="flex flex-ycenter flex-between">
             <h1>{this.props.landmark.fields.title}</h1>
-            <h1>#{this.props.index + 1}</h1>
+            <h1>#{this.props.landmark.index}</h1>
           </div>
           <img src={this.props.landmark.fields.image.fields.file.url} />
           <p>{this.props.landmark.fields.caption}</p>
