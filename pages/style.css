@@ -12,5 +12,10 @@
 
   --badge-border-radius: 2px;
 
+  --font-size: 18px;
   --headings-font-family: 'Spectral', serif;
+  --headings-font-size-h1: var(--space-3);
+  --headings-font-size-h2: var(--space-2);
+  --headings-font-size-h3: var(--space-1);
+  --headings-font-weight: var(--font-weight-medium);
 }
