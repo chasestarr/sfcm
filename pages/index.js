@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '../routes';
 
 import { createClient } from '../lib/contentful';
 
@@ -16,8 +17,18 @@ class Index extends React.Component {
   }
 
   render() {
-    console.log(this.props.landmarks);
-    return <div>hello</div>;
+    return (
+      <div>
+        Hello world
+        {this.props.landmarks.map(landmark => (
+          <div key={landmark.fields.slug}>
+            <a href={`/${landmark.fields.slug}`}>
+              <h2>{landmark.fields.title}</h2>
+            </a>
+          </div>
+        ))}
+      </div>
+    );
   }
 }
 
