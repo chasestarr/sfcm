@@ -1,0 +1,16 @@
+:root {
+  --white: #edeee8;
+  --black: #181a16;
+  --blue: #1961ad;
+  --purple: #6b5d97;
+  --green: #128669;
+  --yellow: #f8bc2c;
+  --red: #e60b21;
+
+  --body-bg-color: var(--black);
+  --body-color: var(--white);
+
+  --badge-border-radius: 2px;
+
+  --headings-font-family: 'Spectral', serif;
+}
