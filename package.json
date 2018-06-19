@@ -15,7 +15,7 @@
     "@zeit/next-css": "^0.2.0",
     "contentful": "^6.1.1",
     "fortune-css": "0.0.14",
-    "next": "^6.0.3",
+    "next": "^6.0.4-canary.8",
     "next-routes": "^1.4.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"

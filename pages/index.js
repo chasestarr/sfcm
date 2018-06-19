@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from '../routes';
+import fortune from 'fortune-css';
+
+import style from './style.css';
 
 import { createClient } from '../lib/contentful';
 
