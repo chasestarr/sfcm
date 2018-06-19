@@ -7,8 +7,14 @@
   --yellow: #f8bc2c;
   --red: #e60b21;
 
+  --space-9: 15rem;
+
   --body-bg-color: var(--black);
   --body-color: var(--white);
+
+  --columns-width: 100%;
+
+  --link-color: var(--white);
 
   --badge-border-radius: 2px;
 

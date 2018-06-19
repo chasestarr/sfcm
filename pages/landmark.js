@@ -29,11 +29,11 @@ class Landmark extends React.Component {
   render() {
     return (
       <div className="cols py-3">
-        <div className="col-3">
+        <div className="col-3 p-0 hide">
           {this.props.landmarks.map((landmark, index) => (
-            <div key={index}>
+            <div style={{ backgroundColor: landmark.fields.category.fields.color }} key={index}>
               <a href={`/${landmark.fields.slug}`}>
-                <h2>
+                <h2 className="m-0 h-8 mh-100 overflow-scroll">
                   {landmark.index}. {landmark.fields.title}
                   {this.props.index === index ? '*' : null}
                 </h2>
@@ -42,7 +42,7 @@ class Landmark extends React.Component {
           ))}
         </div>
 
-        <div className="col-9">
+        <div className="col-6">
           <div
             class="badge bold px-1"
             style={{ backgroundColor: this.props.landmark.fields.category.fields.color }}

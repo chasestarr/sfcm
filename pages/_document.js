@@ -1,6 +1,4 @@
 import Document, { Head, Main, NextScript } from 'next/document';
-import fortune from 'fortune-css';
-import style from './style.css';
 
 export default class MyDocument extends Document {
   render() {
