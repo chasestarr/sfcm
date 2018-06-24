@@ -28,13 +28,14 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div className="cols m-0 w-100 overflow-hidden">
+      <div className="cols m-0 w-100">
         {this.props.landmarks.map((landmark, index) => (
           <div
-            className="col-4 h-9 pt-1"
+            className="col-4 pt-1"
             style={{ backgroundColor: landmark.fields.category.fields.color }}
             key={landmark.fields.slug}
           >
+            <img src={landmark.fields.image.fields.file.url} />
             <a href={`/${landmark.fields.slug}`}>
               <h1>
                 {this.props.landmarks.length - index}. {landmark.fields.title}

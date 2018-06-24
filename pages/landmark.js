@@ -29,7 +29,7 @@ class Landmark extends React.Component {
   render() {
     return (
       <div className="cols py-3">
-        <div className="col-3 p-0 hide">
+        <div className="col-3 p-0 hide sidebar">
           {this.props.landmarks.map((landmark, index) => (
             <div style={{ backgroundColor: landmark.fields.category.fields.color }} key={index}>
               <a href={`/${landmark.fields.slug}`}>

@@ -25,3 +25,8 @@
   --headings-font-size-h3: var(--space-1);
   --headings-font-weight: var(--font-weight-medium);
 }
+
+.sidebar {
+  height: 95vh;
+  overflow: scroll;
+}
