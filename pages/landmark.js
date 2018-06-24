@@ -29,33 +29,20 @@ class Landmark extends React.Component {
   render() {
     return (
       <div className="cols py-3">
-        <div className="col-3 p-0 hide sidebar">
-          {this.props.landmarks.map((landmark, index) => (
-            <div style={{ backgroundColor: landmark.fields.category.fields.color }} key={index}>
-              <a href={`/${landmark.fields.slug}`}>
-                <h2 className="m-0 h-8 mh-100 overflow-scroll">
-                  {landmark.index}. {landmark.fields.title}
-                  {this.props.index === index ? '*' : null}
-                </h2>
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <div className="col-6">
+        <div className="col-8 offset-2">
           <div
-            class="badge bold px-1"
-            style={{ backgroundColor: this.props.landmark.fields.category.fields.color }}
+            style={{ borderColor: this.props.landmark.fields.category.fields.color }}
+            class="badge bold px-1 b-1 b-white"
           >
             {this.props.landmark.fields.category.fields.name}
           </div>
           <div className="flex flex-ycenter flex-between">
             <h1>{this.props.landmark.fields.title}</h1>
-            <h1>#{this.props.landmark.index}</h1>
+            <h3>#{this.props.landmark.index}</h3>
           </div>
           <img src={this.props.landmark.fields.image.fields.file.url} />
           <p class="pt-3">{this.props.landmark.fields.caption}</p>
-          <h2>Submitted by: {this.props.landmark.fields.authorName}</h2>
+          <h3>Submitted by: {this.props.landmark.fields.authorName}</h3>
         </div>
       </div>
     );

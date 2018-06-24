@@ -1,9 +1,11 @@
 import React from 'react';
+import moment from 'moment';
 import fortune from 'fortune-css';
 
 import style from './style.css';
 
 import { createClient } from '../lib/contentful';
+import { isMoment } from 'moment';
 
 class Index extends React.Component {
   static async getInitialProps() {
@@ -28,19 +30,21 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div className="cols m-0 w-100">
+      <div className="cols w-100 py-2">
         {this.props.landmarks.map((landmark, index) => (
-          <div
-            className="col-4 pt-1"
-            style={{ backgroundColor: landmark.fields.category.fields.color }}
-            key={landmark.fields.slug}
-          >
-            <img src={landmark.fields.image.fields.file.url} />
+          <div className="col-4 mb-1" key={landmark.fields.slug}>
             <a href={`/${landmark.fields.slug}`}>
-              <h1>
-                {this.props.landmarks.length - index}. {landmark.fields.title}
-              </h1>
-              <p>{this.truncate(landmark.fields.caption)}</p>
+              <div
+                className="p-1 h-9 b-1 radius-3"
+                style={{ borderColor: landmark.fields.category.fields.color }}
+              >
+                <p className="small">{moment(landmark.sys.createdAt).format('MMM DD, YYYY')}</p>
+                <div className="flex flex-ycenter h-8">
+                  <h3>
+                    {this.props.landmarks.length - index}. {landmark.fields.title}
+                  </h3>
+                </div>
+              </div>
             </a>
           </div>
         ))}

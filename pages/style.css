@@ -12,17 +12,23 @@
   --body-bg-color: var(--black);
   --body-color: var(--white);
 
-  --columns-width: 100%;
+  --columns-width: 80rem;
+  --column-gutter: var(--space-1);
 
   --link-color: var(--white);
 
+  --badge-font-size: var(--gap-5);
   --badge-border-radius: 2px;
+  --badge-bg-color: transparent;
 
-  --font-size: 18px;
+  --font-size: 24px;
+  --font-size-small: calc(var(--font-size) * 0.6);
+  --font-family: Helvetica, Arial, Sans-serif;
   --headings-font-family: 'Spectral', serif;
-  --headings-font-size-h1: var(--space-3);
-  --headings-font-size-h2: var(--space-2);
-  --headings-font-size-h3: var(--space-1);
+
+  --headings-font-size-h1: var(--space-4);
+  --headings-font-size-h2: var(--space-3);
+  --headings-font-size-h3: var(--space-2);
   --headings-font-weight: var(--font-weight-medium);
 }
 
