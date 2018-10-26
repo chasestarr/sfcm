@@ -23,6 +23,7 @@ module.exports = withCSS({
 
     return {
       '/': { page: '/' },
+      '/add': { page: '/add' },
       ...landmarks,
     };
   },

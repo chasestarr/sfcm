@@ -14,6 +14,7 @@
   "dependencies": {
     "@zeit/next-css": "^0.2.0",
     "contentful": "^6.1.1",
+    "contentful-management": "^5.2.2",
     "fortune-css": "0.0.14",
     "moment": "^2.22.2",
     "next": "^6.0.4-canary.8",

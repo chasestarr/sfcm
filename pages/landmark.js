@@ -27,12 +27,14 @@ class Landmark extends React.Component {
   }
 
   render() {
+    if (!this.props.landmark) return null;
+
     return (
       <div className="cols py-3">
         <div className="col-8 offset-2">
           <div
             style={{ borderColor: this.props.landmark.fields.category.fields.color }}
-            class="badge bold px-1 b-1 b-white"
+            className="badge bold px-1 b-1 b-white"
           >
             {this.props.landmark.fields.category.fields.name}
           </div>
@@ -41,7 +43,7 @@ class Landmark extends React.Component {
             <h3>#{this.props.landmark.index}</h3>
           </div>
           <img src={this.props.landmark.fields.image.fields.file.url} />
-          <p class="pt-3">{this.props.landmark.fields.caption}</p>
+          <p className="pt-3">{this.props.landmark.fields.caption}</p>
           <h3>Submitted by: {this.props.landmark.fields.authorName}</h3>
         </div>
       </div>

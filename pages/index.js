@@ -5,7 +5,6 @@ import fortune from 'fortune-css';
 import style from './style.css';
 
 import { createClient } from '../lib/contentful';
-import { isMoment } from 'moment';
 
 class Index extends React.Component {
   static async getInitialProps() {
@@ -18,14 +17,6 @@ class Index extends React.Component {
       .then(response => ({
         landmarks: response.items,
       }));
-  }
-
-  truncate(str) {
-    if (str.length < 250) {
-      return str;
-    }
-
-    return str.slice(0, 250) + '...';
   }
 
   render() {

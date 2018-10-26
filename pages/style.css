@@ -8,6 +8,7 @@
   --red: #e60b21;
 
   --space-9: 15rem;
+  --input-color: var(--black);
 
   --body-bg-color: var(--black);
   --body-color: var(--white);
@@ -23,16 +24,26 @@
 
   --font-size: 24px;
   --font-size-small: calc(var(--font-size) * 0.6);
-  --font-family: Helvetica, Arial, Sans-serif;
-  --headings-font-family: 'Spectral', serif;
+  --font-family: 'Elena', Helvetica, Arial, Sans-serif;
+  --headings-font-family: 'Plantin', serif;
 
   --headings-font-size-h1: var(--space-4);
   --headings-font-size-h2: var(--space-3);
   --headings-font-size-h3: var(--space-2);
   --headings-font-weight: var(--font-weight-medium);
+
+  --input-color: var(--white);
+  --input-bg-color: var(--black);
+  --input-border-color: var(--white);
+  --input-focus-color: var(--white);
 }
 
-.sidebar {
-  height: 95vh;
-  overflow: scroll;
+@font-face {
+  font-family: 'Plantin';
+  src: url('/static/fonts/plantin-typeface-revival.otf');
+}
+
+@font-face {
+  font-family: 'Elena';
+  src: url('/static/fonts/Elena-Regular.otf');
 }
